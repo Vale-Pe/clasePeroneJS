@@ -50,7 +50,7 @@ mostrarInicio()
 
 
 function mostrarInicio () {
-    fondo.setAttribute('src', "img/fondo.jpg")
+    fondo.setAttribute('src', "Img/fondo.jpg")
     divFormulario.innerHTML = '<button type="button" class="btnInicio" value="inicio">INICIO</button>'
 
     btnInicio = document.querySelector(".btnInicio")
@@ -92,7 +92,7 @@ function inicio() {
 
 function validarJugador() {
 
-    fondo.setAttribute('src', "img/fondo.jpg")
+    fondo.setAttribute('src', "Img/fondo.jpg")
     divFormulario.innerHTML = '<form action="" class="formulario"></form>'
 
     let formulario1 = document.querySelector(".formulario")
