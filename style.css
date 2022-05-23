@@ -1,0 +1,381 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+}
+
+body button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.light #boton {
+    z-index: 100;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    border-radius: 20px 20px;
+    border-color: white;
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: rgb(3, 3, 46);
+}
+
+.dark #boton {
+    z-index: 100;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    border-radius: 20px 20px;
+    border-color: rgb(3, 3, 46);
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: yellow;
+}
+
+.light #boton span {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.dark #boton span {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="rgb(3, 3, 46)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.divContainer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .fondo {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.light .fondo {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.divFormulario {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    position: absolute;
+}
+
+.divFormulario h2 {
+    font-family: 'Roboto Flex', sans-serif;
+    color: white;
+}
+
+.dark /* .divContainer .divFormulario */ .btnInicio {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    height: 10vh;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 0px 0px 20px white;
+    color: white;
+    background-color: yellow;
+    font-size: 3vh;
+    font-weight: bold;
+    text-shadow: 0 0 4px rgb(3, 3, 46);
+}
+
+.light /* .divContainer .divFormulario */ .btnInicio {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    height: 10vh;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 2px solid rgb(3, 3, 46);
+    box-shadow: 0px 0px 20px yellow;
+    color: rgb(3, 3, 46);
+    background-color: white;
+    font-size: 3vh;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 2px yellow; */
+}
+
+.sweetAlert2 {
+    font-family: 'Roboto Flex', sans-serif;
+    color: grey;
+}
+
+.dark /* .divContainer .divFormulario  */form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid yellow;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: auto hidden;
+}
+
+.light /* .divContainer .divFormulario */ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 80vh;
+    border: 2px solid yellow;
+    background-color: rgb(255, 255, 255, 0.5);
+    overflow:auto hidden;
+}
+
+.dark /* .divContainer .divFormulario */ .parrafo {
+    margin-top: 30px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.light /* .divContainer .divFormulario */ .parrafo {
+    margin-top: 30px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(3, 3, 46);
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    height: 100%;
+}
+
+.datos div {
+    width: 100%;
+    text-align: center;
+}
+
+.dark .input {
+    display: inline-block;
+    font-size: 16px;
+    color: grey;
+    width: 30vw;
+    min-width: 180px;
+    height: 38px;
+    margin-top: 12px;
+    padding-left: 5px;
+    border-radius: 10px 10px;
+    border: 1px solid rgb(3, 3, 46); ;
+}
+
+.light .input {
+    display: inline-block;
+    font-size: 16px;
+    color: grey;
+    width: 30vw;
+    min-width: 180px;
+    height: 38px;
+    margin-top: 12px;
+    padding-left: 5px;
+    border-radius: 10px 10px;
+    border: 1px solid yellow; ;
+}
+
+.dark .btnDatos {
+    display: inline-block;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(3, 3, 46);
+    padding: 0 15px;
+    width: auto;
+    height: 40px;
+    background-color: yellow;
+    border: 1px solid rgb(3, 3, 46);
+    border-radius: 10px 10px;
+}
+
+.light .btnDatos {
+    display: inline-block;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    padding: 0 15px;
+    width: auto;
+    height: 40px;
+    background-color: rgb(3, 3, 46);
+    border: 1px solid white;
+    border-radius: 10px 10px;
+}
+
+
+.btnComienzo {
+    display: inline-block;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    padding: 10px 3vw;
+    width: 200px;
+    height: 60px;
+    margin: 20px 0;
+    background-color: rgb(3, 3, 46);
+    border: 1px solid white;
+    border-radius: 10px 10px;
+}
+
+.eleccionLibro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.divLibros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    min-width: 150px;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+    margin: 10px; 
+}
+
+.divLibros img {
+    width: 100%;
+    min-width: 150px;
+    max-width: 180px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.inputLibros {
+    margin: 5px 0;
+}
+
+.tituloLibros {
+    width: 100%;
+    min-width: 180px;
+    height: auto;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 100%;
+    color: white;
+    margin: 5px 0;
+}
+
+.btnLibros {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    padding: 3vh 3vw;
+    width: auto;
+    height: auto;
+    background-color: rgb(3, 3, 46);
+    border: 1px solid white;
+    border-radius: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.divTexto {
+    width: 90%;
+    height: auto;
+    text-align: justify;
+}
+
+.btnVoz {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid yellow;
+} 
+
+.divBtns {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.btn {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 32px;
+    padding: 10px 20px;
+    background-color: yellow;
+    border-radius: 30%;
+}
+
+.divTextoFinal {
+    width: 90%;
+    height: auto;
+    text-align: center;
+}
