@@ -3,9 +3,14 @@ import {darkMode, lightMode} from "./themesModules.js"
 
 let boton = document.querySelector("#boton");
 
-function hablar(parrafo){
+let btnVoz = document.querySelector(".btnVoz")
+btnVoz.addEventListener("click", hablar)
+
+function hablar(evt){
+    evt.preventDefault()
+
     let voz = new SpeechSynthesisUtterance();
-    voz.text = parrafo;
+    voz.text = document .querySelector(".divFormulario").textContent
     voz.lang = "es-AR"
     speechSynthesis.speak(voz)
 }
@@ -51,9 +56,10 @@ mostrarInicio()
 
 function mostrarInicio () {
     // fondo.setAttribute('src', "Img/fondo.jpg")
-    divFormulario.innerHTML = '<button type="button" class="btnInicio" value="inicio">INICIO</button>'
+    divFormulario.innerHTML = '<button type="button" class="btnInicio" value="inicio"></button>'
 
     btnInicio = document.querySelector(".btnInicio")
+    btnInicio.textContent = "INICIO"
     btnInicio.addEventListener("click", inicio)
 }
 
@@ -190,18 +196,18 @@ const libros = [
     {
         img: "VBEM.jpg", 
         id: "0",
-        titulo: "Viaje bajo el mar", 
+        titulo: "Viaje bajo el mar. ", 
         paginas: "144"
     },
     {
         img: "LCDP.jpg",
         id: "1", 
-        titulo: "La casa del peligro", 
+        titulo: "La casa del peligro. ", 
         paginas: "128"},
     {   
         img: "EMDLM.jpg", 
         id: "2", 
-        titulo: "El misterio de los mayas", 
+        titulo: "El misterio de los mayas. ", 
         paginas: "160"
     }
 ];
@@ -284,18 +290,18 @@ function iniciarLibro() {
 
     const parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Eres explorador submarino. En este momento zarpas con el propósito de explorar las aguas más profundas. Tienes que encontrar la ciudad perdida de Atlántida: la misión más apasionante que te han encomendado. Subís con tu equipo y tu traje especial a tu nave submarina. Comienza el descenso a las profundidades del oceano, con la ayuda de un cable delgado aunque resistente. La nave llega a una saliente cercana al lecho del océano. Si decides, puedes salir a explorar el saliente. Sino, puedes soltar el cable y explorar el lecho con el submarino."
-    hablar(parrafo.textContent)
+    parrafo.textContent = "Eres explorador submarino. En este momento zarpas con el propósito de explorar las aguas más profundas. Tienes que encontrar la ciudad perdida de Atlántida: la misión más apasionante que te han encomendado. Subís con tu equipo y tu traje especial a tu nave submarina. Comienza el descenso a las profundidades del oceano, con la ayuda de un cable delgado aunque resistente. La nave llega a una saliente cercana al lecho del océano. Si decides, puedes salir a explorar el saliente. Sino, puedes soltar el cable y explorar el lecho con el submarino. "
+    //hablar(parrafo.textContent)
 
     const parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Si decides explorar el saliente presioná 1. ";
     parrafo2.textContent += "Si decides explorar con el submarino presioná 2"
-    hablar(parrafo2.textContent)
+    //hablar(parrafo2.textContent)
 
 
     // Yo quiero que al presionar este boton se ejecute la funcion hablar. pero si pongo un addEventListener con un click, lo escucha y vuelve al principio
-/*  let btnVoz = document.createElement("button")
+/*     let btnVoz = document.createElement("button")
     btnVoz.classList.add("btnVoz")
     btnVoz.textContent = "Voz" */
 
@@ -314,7 +320,21 @@ function iniciarLibro() {
     // formulario3.appendChild(btnVoz)
     formulario3.appendChild(divBtns)
 
-    // btnVoz.addEventListener("click", hablar())
+    // btnVoz.addEventListener("click", hablar)
+
+/*     btnVoz.addEventListener("click", (evt) => {
+            evt.preventDefault()
+        
+            let voz = new SpeechSynthesisUtterance();
+            voz.text = parrafo.textContent;
+            voz.text += parrafo2.textContent;
+            voz.lang = "es-AR"
+            speechSynthesis.speak(voz)
+        }) */
+/*     btnVoz.addEventListener("dblclick", (evt) => {
+        evt.preventDefault()
+        speechSynthesis.pause(voz)
+    }) */
     
     btn1.addEventListener("click", salirDelSubmarino)
     btn2.addEventListener("click", soltarCable)
@@ -337,13 +357,13 @@ function salirDelSubmarino () {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Sales del submarino maravillado por el mundo extraño que encuentras. Comienzas a explorar con ayuda de tu reflector de mano. De pronto pasa a tu lado un cardumen a gran velocidad. Giras para ver de que se trata y descubres que la nave está en poder de un enorme monstruo submarino. Sabes que tu traje no te protejerá contra semejante mostruo."
-    hablar(parrafo.textContent)
+    //hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Si decides esconderte ingresá 1. ";
     parrafo2.textContent += "Si decides escapar ingresá 2"
-    hablar(parrafo2.textContent)
+    //hablar(parrafo2.textContent)
     
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
@@ -377,13 +397,13 @@ function soltarCable () {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Indicas por radio la situación. Avisas que soltarás el cable. Dan su aprovación. Enciendes el reflector de la nave. A la izquierda visualizas una cueva. A la derecha observas como ascienen constantemente burbujas desde el fondo del cañon."
-    hablar(parrafo.textContent)
+    //hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Para investigar la cueva presioná 1. ";
     parrafo2.textContent += "Para investigar las burbujas presioná 2"
-    hablar(parrafo2.textContent)
+    //hablar(parrafo2.textContent)
     
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
@@ -419,12 +439,12 @@ function esconderte() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "El gigantesco calamar se revuelve y vuelca el submarino, pero al fin, se cansa del juego y se aleja. Ahora eres libre de abandonar el escondite y revisar la nave para averiguar si está averiada. Descubres que la entrada está averiada. No puedes entrar. No obstante, la tripulación del barco sospechó que estabas en dificultades cuando no respondiste a un control rutinario por radio. Ahora están bajando una plataforma de salvamento. En cuanto estás en la plataforma les avisas para que empiecen a izarla lentamente hacia la superficie. Tendrán que subirte con gran lentitud, a fin de que no contraigas la enfermedad de la descompresión (la rápida expansión de burbujas de nitrógeno en la sangre). En el preciso instante en que la plataforma comienza a moverse, el calamar gigante reaparece de imprevisto, como salido de la nada. Va directamente hacia ti."
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Para luchar contra el calamar elegí 1. Si elegis indicar que te suban a toda velocidad, aún sabiendo que contraerás la enfermedad de la descompresión ingresá 2."
-    hablar(parrafo2.textContent)
+    // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
@@ -458,12 +478,12 @@ function escapar() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Con movimientos prudentes abandonas el submarino en las garras del gigantesco calamar. Planeas pedir ayuda dejando flotar un rotulador que llegará a la superficie y dejará en el agua un brillante manchón amarillo. Los hombres de la tripulación tienen instrucciones de estar atentos a esas señales de emergencia. En cuanto las descubran te enviarán ayuda. Cuando llegas al saliente del cañón te sientes un poco más seguro, pero en ese momento ves al más temible de los seres marinos: un tiburón. Tienes la certeza de que eres su blanco. Quizá deberías accionar la carga protectora de emergencia que te enviaría inmediatamente a la superficie. Pero el tiburón es rápido y tal vez podría agarrarte. Sabes también que en razón del rápido ascenso contraerías la enfermedad de la descompresión."
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
     
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Si decides disparar la carga especial,para llegar a la superficie ingresá 1. Si resuelves permanecer inmóvil con la esperanza de que el tiburón se aleje ingresá 2."
-    hablar(parrafo2.textContent)
+    // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
@@ -497,12 +517,12 @@ function investigarCueva () {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Con mucho cuidado conduces el submarino entre las paredes del cañón. Descubres en el fondo un gran hoyo del que emanan las burbujas. El submarino cuenta con un equipo científico para analizarlas. Tiene también un sonar que puede medir las profundidades de cualquier cavidad."
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Para analizar las burbujas ingresá 1. Para hacer mediciones con el sonar ingresá 2."
-    hablar(parrafo2.textContent)
+    // hablar(parrafo2.textContent)
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
     btn1.classList.add("btn")
@@ -535,12 +555,12 @@ function investigarBurbujas() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Piloteas el submarino a través de la entrada de la cueva. Una vez en el interior, el reflector ilumina unas estructuras parecidas a muelles y embarcaderos junto a los muros de la cueva. El reflector no es muy potente, pero llevas un láser especial con el que podrías iluminar la cueva y hacerla tan luminosa como si fuera de día. Lamentablemente la luz del láser sólo puede usarse dos veces y durante períodos muy breves, pues debe recargarse a bordo del barco, que ahora se encuentra en la superficie a más de 600 metros por encima de tu cabeza."
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Para usar la luz del láser ingresá 1. Para adentrarte en la cueva ingresá 2."
-    hablar(parrafo2.textContent)
+    // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
     btn1.textContent = "1"
