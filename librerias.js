@@ -159,6 +159,7 @@ function validarDatos(evt) {
             showConfirmButton: true,
             showCloseButton: true,
             confirmButtonText: 'Aceptar',
+            customClass: 'sweetAlert2',
         })
         const despedida1 = [`¡Que tengas un buen día!`, `¡Que tengas buenas tardes!`, `¡Que tengas buenas noches!`]
         const final1 = new Date()
@@ -179,6 +180,7 @@ function validarDatos(evt) {
         showConfirmButton: true,
         showCloseButton: true,
         confirmButtonText: 'Aceptar',
+        customClass: 'sweetAlert2',
         })
     } else {
         // formulario2.style.display = "none"
@@ -188,6 +190,7 @@ function validarDatos(evt) {
         showConfirmButton: true,
         showCloseButton: true,
         confirmButtonText: 'Aceptar',
+        customClass: 'sweetAlert2',
     })
     }
 }
@@ -272,14 +275,17 @@ function elegirLibro(evt) {
             showConfirmButton: true,
             showCloseButton: true,
             confirmButtonText: 'Aceptar',
+            customClass: 'sweetAlert2',
         })
     }
 }
 
 function iniciarLibro() {
 
-    divFormulario.innerHTML = '<form action="" class="formulario"></form>'
+    divFormulario.innerHTML = '<img class="imgFondo" src="Img/barco.jpg" alt="">'
+    divFormulario.innerHTML += '<form action="" class="formulario"></form>'
 
+    //let imgFondo = document.querySelector(".imgFondo")
     let formulario3 = document.querySelector(".formulario")
 
     const divTexto = document.createElement("div")
@@ -296,7 +302,7 @@ function iniciarLibro() {
     const parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Si decides explorar el saliente presioná 1. ";
-    parrafo2.textContent += "Si decides explorar con el submarino presioná 2"
+    parrafo2.textContent += "Si decides explorar con el submarino presioná 2. "
     //hablar(parrafo2.textContent)
 
 
@@ -306,10 +312,10 @@ function iniciarLibro() {
     btnVoz.textContent = "Voz" */
 
     const btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     const btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -344,7 +350,8 @@ function iniciarLibro() {
 // PARTE 1
 
 function salirDelSubmarino () {
-    divFormulario.innerHTML = '<form action="" class="formulario"></form>'
+    divFormulario.innerHTML = '<img class="imgFondo" src="Img/calamar.jpg" alt="">'
+    divFormulario.innerHTML += '<form action="" class="formulario"></form>'
 
     let formulario3 = document.querySelector(".formulario")
 
@@ -356,20 +363,20 @@ function salirDelSubmarino () {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Sales del submarino maravillado por el mundo extraño que encuentras. Comienzas a explorar con ayuda de tu reflector de mano. De pronto pasa a tu lado un cardumen a gran velocidad. Giras para ver de que se trata y descubres que la nave está en poder de un enorme monstruo submarino. Sabes que tu traje no te protejerá contra semejante mostruo."
+    parrafo.textContent = "Sales del submarino maravillado por el mundo extraño que encuentras. Comienzas a explorar con ayuda de tu reflector de mano. De pronto pasa a tu lado un cardumen a gran velocidad. Giras para ver de que se trata y descubres que la nave está en poder de un enorme monstruo submarino. Sabes que tu traje no te protejerá contra semejante monstruo. "
     //hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Si decides esconderte ingresá 1. ";
-    parrafo2.textContent += "Si decides escapar ingresá 2"
+    parrafo2.textContent += "Si decides escapar ingresá 2. "
     //hablar(parrafo2.textContent)
     
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -396,20 +403,20 @@ function soltarCable () {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Indicas por radio la situación. Avisas que soltarás el cable. Dan su aprovación. Enciendes el reflector de la nave. A la izquierda visualizas una cueva. A la derecha observas como ascienen constantemente burbujas desde el fondo del cañon."
+    parrafo.textContent = "Indicas por radio la situación. Avisas que soltarás el cable. Dan su aprovación. Enciendes el reflector de la nave. A la izquierda visualizas una cueva. A la derecha observas como ascienen constantemente burbujas desde el fondo del cañon. "
     //hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
     parrafo2.textContent = "Para investigar la cueva presioná 1. ";
-    parrafo2.textContent += "Para investigar las burbujas presioná 2"
+    parrafo2.textContent += "Para investigar las burbujas presioná 2. "
     //hablar(parrafo2.textContent)
     
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -438,19 +445,19 @@ function esconderte() {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "El gigantesco calamar se revuelve y vuelca el submarino, pero al fin, se cansa del juego y se aleja. Ahora eres libre de abandonar el escondite y revisar la nave para averiguar si está averiada. Descubres que la entrada está averiada. No puedes entrar. No obstante, la tripulación del barco sospechó que estabas en dificultades cuando no respondiste a un control rutinario por radio. Ahora están bajando una plataforma de salvamento. En cuanto estás en la plataforma les avisas para que empiecen a izarla lentamente hacia la superficie. Tendrán que subirte con gran lentitud, a fin de que no contraigas la enfermedad de la descompresión (la rápida expansión de burbujas de nitrógeno en la sangre). En el preciso instante en que la plataforma comienza a moverse, el calamar gigante reaparece de imprevisto, como salido de la nada. Va directamente hacia ti."
+    parrafo.textContent = "El gigantesco calamar se revuelve y vuelca el submarino, pero al fin, se cansa del juego y se aleja. Ahora eres libre de abandonar el escondite y revisar la nave para averiguar si está averiada. Descubres que la entrada está averiada. No puedes entrar. No obstante, la tripulación del barco sospechó que estabas en dificultades cuando no respondiste a un control rutinario por radio. Ahora están bajando una plataforma de salvamento. En cuanto estás en la plataforma les avisas para que empiecen a izarla lentamente hacia la superficie. Tendrán que subirte con gran lentitud, a fin de que no contraigas la enfermedad de la descompresión (la rápida expansión de burbujas de nitrógeno en la sangre). En el preciso instante en que la plataforma comienza a moverse, el calamar gigante reaparece de imprevisto, como salido de la nada. Va directamente hacia ti. "
     // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
-    parrafo2.textContent = "Para luchar contra el calamar elegí 1. Si elegis indicar que te suban a toda velocidad, aún sabiendo que contraerás la enfermedad de la descompresión ingresá 2."
+    parrafo2.textContent = "Para luchar contra el calamar elegí 1. Si elegis indicar que te suban a toda velocidad, aún sabiendo que contraerás la enfermedad de la descompresión ingresá 2. "
     // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -477,19 +484,19 @@ function escapar() {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Con movimientos prudentes abandonas el submarino en las garras del gigantesco calamar. Planeas pedir ayuda dejando flotar un rotulador que llegará a la superficie y dejará en el agua un brillante manchón amarillo. Los hombres de la tripulación tienen instrucciones de estar atentos a esas señales de emergencia. En cuanto las descubran te enviarán ayuda. Cuando llegas al saliente del cañón te sientes un poco más seguro, pero en ese momento ves al más temible de los seres marinos: un tiburón. Tienes la certeza de que eres su blanco. Quizá deberías accionar la carga protectora de emergencia que te enviaría inmediatamente a la superficie. Pero el tiburón es rápido y tal vez podría agarrarte. Sabes también que en razón del rápido ascenso contraerías la enfermedad de la descompresión."
+    parrafo.textContent = "Con movimientos prudentes abandonas el submarino en las garras del gigantesco calamar. Planeas pedir ayuda dejando flotar un rotulador que llegará a la superficie y dejará en el agua un brillante manchón amarillo. Los hombres de la tripulación tienen instrucciones de estar atentos a esas señales de emergencia. En cuanto las descubran te enviarán ayuda. Cuando llegas al saliente del cañón te sientes un poco más seguro, pero en ese momento ves al más temible de los seres marinos: un tiburón. Tienes la certeza de que eres su blanco. Quizá deberías accionar la carga protectora de emergencia que te enviaría inmediatamente a la superficie. Pero el tiburón es rápido y tal vez podría agarrarte. Sabes también que en razón del rápido ascenso contraerías la enfermedad de la descompresión. "
     // hablar(parrafo.textContent)
     
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
-    parrafo2.textContent = "Si decides disparar la carga especial,para llegar a la superficie ingresá 1. Si resuelves permanecer inmóvil con la esperanza de que el tiburón se aleje ingresá 2."
+    parrafo2.textContent = "Si decides disparar la carga especial,para llegar a la superficie ingresá 1. Si resuelves permanecer inmóvil con la esperanza de que el tiburón se aleje ingresá 2. "
     // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -516,18 +523,18 @@ function investigarCueva () {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Con mucho cuidado conduces el submarino entre las paredes del cañón. Descubres en el fondo un gran hoyo del que emanan las burbujas. El submarino cuenta con un equipo científico para analizarlas. Tiene también un sonar que puede medir las profundidades de cualquier cavidad."
+    parrafo.textContent = "Con mucho cuidado conduces el submarino entre las paredes del cañón. Descubres en el fondo un gran hoyo del que emanan las burbujas. El submarino cuenta con un equipo científico para analizarlas. Tiene también un sonar que puede medir las profundidades de cualquier cavidad. "
     // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
-    parrafo2.textContent = "Para analizar las burbujas ingresá 1. Para hacer mediciones con el sonar ingresá 2."
+    parrafo2.textContent = "Para analizar las burbujas ingresá 1. Para hacer mediciones con el sonar ingresá 2. "
     // hablar(parrafo2.textContent)
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -554,19 +561,19 @@ function investigarBurbujas() {
 
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
-    parrafo.textContent = "Piloteas el submarino a través de la entrada de la cueva. Una vez en el interior, el reflector ilumina unas estructuras parecidas a muelles y embarcaderos junto a los muros de la cueva. El reflector no es muy potente, pero llevas un láser especial con el que podrías iluminar la cueva y hacerla tan luminosa como si fuera de día. Lamentablemente la luz del láser sólo puede usarse dos veces y durante períodos muy breves, pues debe recargarse a bordo del barco, que ahora se encuentra en la superficie a más de 600 metros por encima de tu cabeza."
+    parrafo.textContent = "Piloteas el submarino a través de la entrada de la cueva. Una vez en el interior, el reflector ilumina unas estructuras parecidas a muelles y embarcaderos junto a los muros de la cueva. El reflector no es muy potente, pero llevas un láser especial con el que podrías iluminar la cueva y hacerla tan luminosa como si fuera de día. Lamentablemente la luz del láser sólo puede usarse dos veces y durante períodos muy breves, pues debe recargarse a bordo del barco, que ahora se encuentra en la superficie a más de 600 metros por encima de tu cabeza. "
     // hablar(parrafo.textContent)
 
     let parrafo2 = document.createElement("p")
     parrafo2.classList.add("parrafo")
-    parrafo2.textContent = "Para usar la luz del láser ingresá 1. Para adentrarte en la cueva ingresá 2."
+    parrafo2.textContent = "Para usar la luz del láser ingresá 1. Para adentrarte en la cueva ingresá 2. "
     // hablar(parrafo2.textContent)
 
     let btn1 = document.createElement("button")
-    btn1.textContent = "1"
+    btn1.textContent = "1 "
     btn1.classList.add("btn")
     let btn2 = document.createElement("button")
-    btn2.textContent = "2"
+    btn2.textContent = "2 "
     btn2.classList.add("btn")
 
     divTexto.appendChild(parrafo)
@@ -592,7 +599,7 @@ function lucharContraCalamar () {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    //hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -612,7 +619,7 @@ function subirRapido() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    //hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -629,7 +636,7 @@ function dispararCarga() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -646,7 +653,7 @@ function permanecerInmovil() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -663,7 +670,7 @@ function analizarburbujas() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -680,7 +687,7 @@ function medirConSonar() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora";
-    hablar(parrafo.textContent)  
+    // hablar(parrafo.textContent)  
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -697,7 +704,7 @@ function usarLuzLaser() {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
@@ -714,7 +721,7 @@ function adentrarteEnCueva () {
     let parrafo = document.createElement("p")
     parrafo.classList.add("parrafo")
     parrafo.textContent = "Hasta aca llegamos por ahora"; 
-    hablar(parrafo.textContent)
+    // hablar(parrafo.textContent)
 
     divTexto.appendChild(parrafo)
     formulario3.appendChild(divTexto)
