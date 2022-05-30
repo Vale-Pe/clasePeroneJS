@@ -1,0 +1,19 @@
+[
+    {
+        "img": "Img/VBEM.jpg", 
+        "id": "0",
+        "titulo": "Viaje bajo el mar. ", 
+        "paginas": "144"
+    },
+    {
+        "img": "Img/LCDP.jpg",
+        "id": "1", 
+        "titulo": "La casa del peligro. ", 
+        "paginas": "128"},
+    {   
+        "img": "Img/EMDLM.jpg", 
+        "id": "2", 
+        "titulo": "El misterio de los mayas. ", 
+        "paginas": "160"
+    }
+]
