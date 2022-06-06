@@ -231,6 +231,22 @@ body {
     color: rgb(3, 3, 46);
 }
 
+.dark .parrafo2 {
+    margin-top: 30px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.light .parrafo2 {
+    margin-top: 30px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(3, 3, 46);
+}
+
 .datos {
     display: flex;
     flex-direction: column;
@@ -391,10 +407,10 @@ body {
 
 .btn {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     padding: 10px 20px;
     background-color: yellow;
-    border-radius: 30%;
+    border-radius: 30px;
 }
 
 .divTextoFinal {
