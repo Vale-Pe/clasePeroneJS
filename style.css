@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .light #boton {
@@ -191,7 +191,6 @@ body {
     height: 80vh;
     border: 2px solid yellow;
     background-color: rgb(0, 0, 0, 0.5);
-    overflow: auto hidden;
     position: absolute;
 }
 
@@ -204,7 +203,6 @@ body {
     height: 80vh;
     border: 2px solid yellow;
     background-color: rgb(255, 255, 255, 0.5);
-    overflow:auto hidden;
     position: absolute;
 }
 
@@ -215,10 +213,25 @@ body {
     opacity: 0.4;
 }
 
+.divTexto {
+    width: 90%;
+    height: auto;
+    max-height: 70%;
+    overflow: auto;
+    text-align: justify;
+}
+
+.divBtns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+}
+
 .dark /* .divContainer .divFormulario */ .parrafo {
     margin-top: 30px;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 24px;
     font-weight: bold;
     color: white;
 }
@@ -226,25 +239,30 @@ body {
 .light /* .divContainer .divFormulario */ .parrafo {
     margin-top: 30px;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 24px;
     font-weight: bold;
     color: rgb(3, 3, 46);
 }
 
-.dark .parrafo2 {
-    margin-top: 30px;
+.dark center {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
     color: white;
+    font-size: 2rem;
 }
 
-.light .parrafo2 {
-    margin-top: 30px;
+.light center {
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
     color: rgb(3, 3, 46);
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 28px;
+    padding: 10px 20px;
+    margin: 4px;
+    background-color: yellow;
+    border-radius: 30px;
 }
 
 .datos {
@@ -323,12 +341,13 @@ body {
     font-size: 18px;
     color: white;
     padding: 10px 3vw;
-    width: 200px;
+    width: auto;
     height: 60px;
     margin: 20px 0;
     background-color: rgb(3, 3, 46);
     border: 1px solid white;
     border-radius: 10px 10px;
+    margin: 0;
 }
 
 .eleccionLibro{
@@ -337,6 +356,8 @@ body {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    max-height: 80%;
+    overflow: auto;
     justify-content: space-evenly;
     text-align: center;
 }
@@ -346,19 +367,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 30%;
-    min-width: 150px;
-    max-width: 250px;
-    height: auto;
+    height: 90%;
+    width: auto;
+    min-width: 30%;
     object-fit: cover;
     margin: 10px; 
 }
 
 .divLibros img {
-    width: 100%;
-    min-width: 150px;
-    max-width: 180px;
-    height: auto;
+    height: 70%;
+    width: auto;
     margin: 10px 0;
 }
 
@@ -382,7 +400,6 @@ body {
     align-content: center;
     font-family: 'Roboto Flex', sans-serif;
     font-weight: bold;
-    font-size: 18px;
     color: white;
     padding: 3vh 3vw;
     width: auto;
@@ -391,26 +408,6 @@ body {
     border: 1px solid white;
     border-radius: 10px 10px;
     margin-bottom: 10px;
-}
-
-.divTexto {
-    width: 90%;
-    height: auto;
-    text-align: justify;
-}
-
-.divBtns {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.btn {
-    font-family: 'Roboto Flex', sans-serif;
-    font-size: 28px;
-    padding: 10px 20px;
-    background-color: yellow;
-    border-radius: 30px;
 }
 
 .divTextoFinal {

@@ -113,9 +113,9 @@ function validarJugador() {
     divDatos.appendChild(btnDatos)
     formulario1.appendChild(divDatos)
 
-    divEdad.innerHTML = '<p class="parrafo">¿Cuál es tu edad?</p><label for="inputEdad"><input type="number" id="inputEdad" class="input" placeholder="Edad: "></label>'
+    divEdad.innerHTML = '<p class="parrafo fs-4">¿Cuál es tu edad?</p><label for="inputEdad"><input type="number" id="inputEdad" class="input" placeholder="Edad: "></label>'
 
-    divNombre.innerHTML = '<p class="parrafo">Introduce tu nombre, por favor.</p><label for="inputNombre"><input type="text" id="inputNombre" class="input" placeholder="Nombre: "></label>'
+    divNombre.innerHTML = '<p class="parrafo fs-4">Introduce tu nombre, por favor.</p><label for="inputNombre"><input type="text" id="inputNombre" class="input" placeholder="Nombre: "></label>'
 
     formulario1.addEventListener("submit", validarDatos)
 }
@@ -138,7 +138,7 @@ function validarDatos(evt) {
             customClass: 'sweetAlert2',
         }) 
 
-        divFormulario.innerHTML = '<button type="button" class="btnComienzo" value="comenzar">Comenzar juego</button>'
+        divFormulario.innerHTML = '<button type="button" class="btnComienzo fs-4" value="comenzar">Comenzar juego</button>'
         
         const btnComienzo = document.querySelector(".btnComienzo")
 
@@ -204,7 +204,7 @@ function comenzarJuego(evt){
                     eleccionLibro.innerHTML += `
                     <div class="divLibros">
                         <img class="imgLibros" src="${libro.img}">
-                        <h4 class="parrafo"><p>${libro.titulo}</p></h4>
+                        <h4 class="parrafo"><p class="fs-5 mb-0">${libro.titulo}</p></h4>
                         <input class="inputLibros" type="radio" name="libros" id="Libro${libro.id}">
                     </div>
                 `
@@ -218,7 +218,7 @@ function comenzarJuego(evt){
     mostrarLibros()
 
     const btnLibros = document.createElement("input");
-    btnLibros.classList.add("btnLibros");
+    btnLibros.classList.add("btnLibros", "fs-6", "mb-0");
     btnLibros.setAttribute("type", "button");
     btnLibros.setAttribute("value", "Seleccionar libro");
     
