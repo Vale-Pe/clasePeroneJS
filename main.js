@@ -1,4 +1,3 @@
-
 //MODO CLARO/MODO OSCURO --> Modulos y localStorage
 
 import {darkMode, lightMode} from "./themesModules.js"
@@ -48,14 +47,21 @@ const despedida = [`¡Que tengas un buen día!`, `¡Que tengas buenas tardes!`, 
 
 const [despedida1, despedida2, despedida3] = despedida //--> Destructuring
 
-console.log (...despedida) //--> Spread de array
+//console.log (...despedida) //--> Spread de array
 
 const final1 = new Date()
 const hora1 = final1.getHours()
 
 //Comienzo-------------------------------------------------------------
 
-mostrarInicio() 
+let container = document.querySelector(".container-fluid")
+setTimeout(function() {
+    container.classList.add('cerrar');
+    mostrarInicio() 
+}, 5000);
+
+
+
 
 function mostrarInicio () {
     divFormulario.innerHTML = '<button type="button" class="btnInicio" value="inicio"></button>'
@@ -79,11 +85,11 @@ function inicio() {
             validarJugador();
         } else {
             const tituloDespedida = document.createElement("h2")
+            tituloDespedida.classList.add("parrafo", "fs-3")
             divFormulario.appendChild(tituloDespedida)
             divFormulario.removeChild(btnInicio)
 
-            hora1>6 && hora1<=12 ? tituloDespedida.textContent = despedida1 : 
-            hora1 >12 && hora1 <=19 ? tituloDespedida.textContent = despedida2 : tituloDespedida.textContent = despedida3
+            hora1>6 && hora1<12 ? tituloDespedida.textContent = despedida1 : hora1 >=12 && hora1 <=19 ? tituloDespedida.textContent = despedida2 : tituloDespedida.textContent = despedida3
             //Operador ternario
         }
     })
@@ -156,12 +162,12 @@ function validarDatos(evt) {
         const final1 = new Date()
         const hora1 = final1.getHours()
 
-        if(hora1 <=12){
-            divFormulario.innerHTML = `<h2>${despedida1[0]}</h2>`
-        } else if ((hora1 >12) && (hora1 <=19)) {
-            divFormulario.innerHTML = `<h2>${despedida1[1]}</h2>`
+        if ((hora1>6 ) && (hora1<12)) {
+            divFormulario.innerHTML = `<h2 class="parrafo fs-3">${despedida1[0]}</h2>`
+        } else if ((hora1 >=12) && (hora1 <=19)) {
+            divFormulario.innerHTML = `<h2 class="parrafo fs-3">${despedida1[1]}</h2>`
         } else {
-            divFormulario.innerHTML = `<h2>${despedida1[2]}</h2>`
+            divFormulario.innerHTML = `<h2 class="parrafo fs-3">${despedida1[2]}</h2>`
         }
     } else if ((edad >=18) && (nombre.length ===0)) {
         Swal.fire ({
@@ -240,7 +246,6 @@ function elegirLibro(evt) {
             showConfirmButton: true,
             showCloseButton: true,
             confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#ffff00',
             customClass: 'sweetAlert2',
         })
     }
@@ -252,12 +257,12 @@ export function mostrarFinal(evt){ //FINAL
     const final = new Date()
     const hora = final.getHours()
     
-    const tituloDespedida = hora>6 && hora<=12 ? Swal.fire ({
+    const tituloDespedida = hora>6 && hora<12 ? Swal.fire ({
         title: despedida1,
         customClass: 'sweetAlert2',
         timer: 2000
     }) : 
-    hora >12 && hora <=19 ? Swal.fire ({
+    hora >=12 && hora <=19 ? Swal.fire ({
         title: despedida2,
         customClass: 'sweetAlert2',
         timer: 2000
