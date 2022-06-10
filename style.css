@@ -104,7 +104,6 @@ body {
     background-position: center center;
 }
 
-
 .divContainer {
     display: flex;
 
@@ -141,7 +140,7 @@ body {
 }
 
 .divFormulario h2 {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     color: white;
 }
 
@@ -155,10 +154,17 @@ body {
     border: 0;
     box-shadow: 0px 0px 20px white;
     color: white;
-    background-color: yellow;
-    font-size: 3vh;
+    background-color: #ffff00;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 4vh;
     font-weight: bold;
     text-shadow: 0 0 4px rgb(3, 3, 46);
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.dark .btnInicio:hover {
+    background-color: rgb(248, 248, 134);
 }
 
 .light /* .divContainer .divFormulario */ .btnInicio {
@@ -172,13 +178,20 @@ body {
     box-shadow: 0px 0px 20px yellow;
     color: rgb(3, 3, 46);
     background-color: white;
-    font-size: 3vh;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 4vh;
     font-weight: bold;
-    /* text-shadow: 1px 1px 2px yellow; */
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.light .btnInicio:hover {
+    background-color: rgb(3, 3, 46);
+    color: white;
 }
 
 .sweetAlert2 {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
     color: grey;
 }
 
@@ -202,7 +215,7 @@ body {
     width: 80vw;
     height: 80vh;
     border: 2px solid yellow;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.6);
     position: absolute;
 }
 
@@ -214,9 +227,9 @@ body {
 }
 
 .divTexto {
-    width: 90%;
+    width: 100%;
     height: auto;
-    max-height: 70%;
+    max-height: 80%;
     overflow: auto;
     text-align: justify;
 }
@@ -230,39 +243,46 @@ body {
 }
 
 .dark /* .divContainer .divFormulario */ .parrafo {
-    margin-top: 30px;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     color: white;
+    margin: 0 10px;
 }
 
 .light /* .divContainer .divFormulario */ .parrafo {
-    margin-top: 30px;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     color: rgb(3, 3, 46);
+    margin: 0 10px;
 }
 
 .dark center {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     color: white;
     font-size: 2rem;
 }
 
 .light center {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     color: rgb(3, 3, 46);
     font-size: 2rem;
 }
 
 .btn {
     display: inline-block;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-size: 28px;
+    font-weight: bold;
     padding: 10px 20px;
     margin: 4px;
     background-color: yellow;
     border-radius: 30px;
+    cursor: pointer;
+    transition: box-shadow .5s linear;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px white;
 }
 
 .datos {
@@ -307,7 +327,7 @@ body {
 
 .dark .btnDatos {
     display: inline-block;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     font-size: 20px;
     color: rgb(3, 3, 46);
@@ -317,11 +337,17 @@ body {
     background-color: yellow;
     border: 1px solid rgb(3, 3, 46);
     border-radius: 10px 10px;
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.dark .btnDatos:hover {
+    background-color: rgb(248, 248, 134);
 }
 
 .light .btnDatos {
     display: inline-block;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     font-size: 20px;
     color: white;
@@ -331,12 +357,18 @@ body {
     background-color: rgb(3, 3, 46);
     border: 1px solid white;
     border-radius: 10px 10px;
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.light .btnDatos:hover {
+    background-color: rgba(3, 3, 46, .8);
 }
 
 
 .btnComienzo {
     display: inline-block;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     font-size: 18px;
     color: white;
@@ -348,6 +380,12 @@ body {
     border: 1px solid white;
     border-radius: 10px 10px;
     margin: 0;
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.btnComienzo:hover {
+    background-color: rgb(15, 15, 54);
 }
 
 .eleccionLibro{
@@ -378,6 +416,8 @@ body {
     height: 70%;
     width: auto;
     margin: 10px 0;
+    box-shadow: 0 0 10px grey;
+    border: 1px solid white;
 }
 
 .inputLibros {
@@ -388,7 +428,7 @@ body {
     width: 100%;
     min-width: 180px;
     height: auto;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-size: 100%;
     color: white;
     margin: 5px 0;
@@ -398,7 +438,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Bellefair', serif;
     font-weight: bold;
     color: white;
     padding: 3vh 3vw;
@@ -408,10 +448,30 @@ body {
     border: 1px solid white;
     border-radius: 10px 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color .5s linear;
+}
+
+.btnLibros:hover {
+    background-color: rgb(15, 15, 54);
 }
 
 .divTextoFinal {
     width: 90%;
     height: auto;
     text-align: center;
+}
+
+.swal2-styled.swal2-confirm {
+    color: white;
+    background-color: rgb(3, 3, 46);
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.swal2-styled.swal2-cancel {
+    color: white;
+    background-color: #6e7881;
+    font-size: 3vh;
+    font-weight: bold;;
 }
