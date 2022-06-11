@@ -27,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    animation: opacity 6s infinite;
+    animation: opacity 5s ease;
 }
 
 @keyframes opacity {
@@ -69,7 +69,7 @@ body {
     background: rgb(1, 1, 32);
     border-left: 2px solid yellow;
 
-    animation: maquina 5s infinite;
+    animation: maquina 3s ease;
 }
 
 @keyframes maquina {
@@ -202,7 +202,7 @@ body {
     position: absolute;
 }
 
-.dark /* .divContainer .divFormulario */ .btnInicio {
+.dark .btnInicio {
     display: inline-block;
     position: absolute;
     width: auto;
@@ -219,13 +219,23 @@ body {
     text-shadow: 0 0 4px rgb(3, 3, 46);
     cursor: pointer;
     transition: background-color .5s linear;
+    animation: opacityBtnD 1s ease;
+}
+
+@keyframes opacityBtnD {
+    from{
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .dark .btnInicio:hover {
     background-color: rgb(248, 248, 134);
 }
 
-.light /* .divContainer .divFormulario */ .btnInicio {
+.light .btnInicio {
     display: inline-block;
     position: absolute;
     width: auto;
@@ -241,6 +251,16 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color .5s linear;
+    animation: opacityBtnL 1s ease;
+}
+
+@keyframes opacityBtnL {
+    from{
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .light .btnInicio:hover {
@@ -253,7 +273,7 @@ body {
     color: grey;
 }
 
-.dark /* .divContainer .divFormulario  */form {
+.dark form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,7 +285,7 @@ body {
     position: absolute;
 }
 
-.light /* .divContainer .divFormulario */ form {
+.light form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,14 +320,14 @@ body {
     justify-content: space-evenly;
 }
 
-.dark /* .divContainer .divFormulario */ .parrafo {
+.dark .parrafo {
     font-family: 'Bellefair', serif;
     font-weight: bold;
     color: white;
     margin: 0 10px;
 }
 
-.light /* .divContainer .divFormulario */ .parrafo {
+.light .parrafo {
     font-family: 'Bellefair', serif;
     font-weight: bold;
     color: rgb(3, 3, 46);
@@ -537,8 +557,7 @@ body {
 .dark footer {
     z-index: 100;
     width: 100vw;
-    height: auto;
-    min-height: 5vh;
+    height: 5vh;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -548,8 +567,7 @@ body {
 .light footer {
     z-index: 100;
     width: 100vw;
-    height: auto;
-    min-height: 5vh;
+    height: 5vh;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
@@ -557,12 +575,19 @@ body {
 }
 
 footer p {
-    display: inline-block;
-    margin: 0;
-    height: auto;
-    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color: yellow;
-    text-align: center;
+    margin: auto;
+}
+
+@media (min-width: 420px) {
+    footer p {
+        font-size: 12px;
+    }
 }

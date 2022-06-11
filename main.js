@@ -58,7 +58,7 @@ let container = document.querySelector(".container-fluid")
 setTimeout(function() {
     container.classList.add('cerrar');
     mostrarInicio() 
-}, 5000);
+}, 4000);
 
 
 
