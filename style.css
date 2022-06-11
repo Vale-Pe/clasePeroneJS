@@ -484,12 +484,17 @@ body {
     width: 5px;
 }
 
+::-webkit-scrollbar-button:end {
+    height: 3px;
+    border: 1px solid white;
+}
+
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px white;
     border: 1px solid transparent;
     border-radius: 10px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: grey;
     border: 1px solid white;
     border-radius: 10px;
@@ -601,6 +606,15 @@ footer p {
     font-size: 10px;
     color: yellow;
     margin: auto;
+}
+
+@media (min-width: 920px) {
+    .divTexto{
+        overflow: scroll;
+    }
+    .eleccionLibro {
+        overflow: scroll;
+    }
 }
 
 @media (min-width: 420px) {
