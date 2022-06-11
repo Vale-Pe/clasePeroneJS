@@ -223,12 +223,18 @@ function comenzarJuego(evt){
 
     mostrarLibros()
 
+    const img = document.createElement("img")
+    img.classList.add("imgFlecha", "d-block", "d-lg-none")
+    img.setAttribute("src", "./Img/flecha.png")
+
     const btnLibros = document.createElement("input");
     btnLibros.classList.add("btnLibros", "fs-5", "mb-0");
     btnLibros.setAttribute("type", "button");
     btnLibros.setAttribute("value", "Seleccionar libro");
     
+
     formulario2.appendChild(eleccionLibro)
+    formulario2.appendChild(img)
     formulario2.appendChild(btnLibros)
 
     btnLibros.addEventListener("click", elegirLibro)

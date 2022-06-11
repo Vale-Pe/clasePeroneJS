@@ -278,6 +278,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 4px 0;
     width: 100%;
     height: 100%;
     border: 2px solid yellow;
@@ -310,7 +311,7 @@ body {
     max-height: 80%;
     overflow: auto;
     text-align: justify;
-    margin-right: 4px;
+    margin: 0 4px;
 }
 
 .divBtns {
@@ -477,27 +478,7 @@ body {
     overflow: auto;
     justify-content: space-evenly;
     text-align: center;
-    margin-right: 4px;
-}
-
-::-webkit-scrollbar{
-    width: 5px;
-}
-
-::-webkit-scrollbar-button:end {
-    height: 3px;
-    border: 1px solid white;
-}
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border: 1px solid transparent;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border: 1px solid white;
-    border-radius: 10px;
+    margin: 0 4px;
 }
 
 .divLibros {
@@ -534,6 +515,13 @@ body {
     margin: 5px 0;
 }
 
+.imgFlecha{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
 .btnLibros {
     display: flex;
     justify-content: center;
@@ -541,7 +529,7 @@ body {
     font-family: 'Bellefair', serif;
     font-weight: bold;
     color: white;
-    padding: 3vh 3vw;
+    padding: 2vh 2vw;
     width: auto;
     height: auto;
     background-color: rgb(3, 3, 46);
@@ -608,16 +596,36 @@ footer p {
     margin: auto;
 }
 
-@media (min-width: 920px) {
-    .divTexto{
-        overflow: scroll;
-    }
-    .eleccionLibro {
-        overflow: scroll;
-    }
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-button:end {
+    height: 3px;
+    border: 1px solid white;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 @media (min-width: 420px) {
+    #boton {
+        margin: 5px;
+    } 
+
+    .btnVoz{
+        top: 5px;
+        right: 5px;
+    }
+
     footer p {
         font-size: 12px;
     }
