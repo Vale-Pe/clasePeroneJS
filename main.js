@@ -60,9 +60,6 @@ setTimeout(function() {
     mostrarInicio() 
 }, 4000);
 
-
-
-
 function mostrarInicio () {
     divFormulario.innerHTML = '<button type="button" class="btnInicio" value="inicio"></button>'
 
